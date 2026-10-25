@@ -96,8 +96,13 @@ sudo systemctl start nightly-agent.service
 #### 3. 查看 C# Agent 執行的詳細 Output / Log：
 
 ```
+####
 sudo journalctl -u nightly-agent.service -n 50 --no-pager
 ```
--n 5 將 `journalctl` 調整為只抓最關鍵的 **5 條** 錯誤
+-n 5 將 `journalctl` 調整為只抓最關鍵的 **5 條** 錯誤 .手動測試
 
 排程設定完成    
+
+### 第六步：關鍵日誌,local ai 報告分析
+
+emailApp.cpp agent主動生成分析報告 email 至管理者email 信箱
